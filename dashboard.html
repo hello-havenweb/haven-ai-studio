@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - HAVEN AI Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h1>HAVEN</h1>
+                    <p>AI Studio</p>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                    <a href="create.html" class="nav-link">Create</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-text" id="logoutBtn">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="sidebar-link active">
+                    <span class="sidebar-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="create.html" class="sidebar-link">
+                    <span class="sidebar-icon">✨</span>
+                    <span>Create</span>
+                </a>
+                <a href="projects.html" class="sidebar-link">
+                    <span class="sidebar-icon">📁</span>
+                    <span>Projects</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link">
+                    <span class="sidebar-icon">💳</span>
+                    <span>Pricing</span>
+                </a>
+                <a href="settings.html" class="sidebar-link">
+                    <span class="sidebar-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <span class="sidebar-icon">💬</span>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Welcome to HAVEN AI Studio</h1>
+                    <p id="userGreeting"></p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Current Plan</div>
+                        <div class="stat-value" id="currentPlan">Free</div>
+                        <div class="stat-description">PKR 0/month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Projects Used</div>
+                        <div class="stat-value"><span id="projectsUsed">0</span> / <span id="projectsLimit">3</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="projectsProgress"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Generations Today</div>
+                        <div class="stat-value"><span id="generationsToday">0</span> / <span id="generationsLimit">10</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="generationsProgress"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Monthly Usage</div>
+                        <div class="stat-value"><span id="monthlyUsage">0</span> / <span id="monthlyLimit">50</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="monthlyProgress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <a href="create.html" class="action-card">
+                            <div class="action-icon">✨</div>
+                            <h3>Create New</h3>
+                            <p>Start generating content</p>
+                        </a>
+                        <a href="projects.html" class="action-card">
+                            <div class="action-icon">📁</div>
+                            <h3>View Projects</h3>
+                            <p>Manage your saved projects</p>
+                        </a>
+                        <a href="pricing.html" class="action-card">
+                            <div class="action-icon">💳</div>
+                            <h3>Upgrade Plan</h3>
+                            <p>Unlock premium features</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Projects -->
+                <div class="recent-section">
+                    <h2>Recent Projects</h2>
+                    <div id="recentProjects" class="projects-list">
+                        <p class="empty-state">No projects yet. <a href="create.html">Create your first project</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Upgrade Modal -->
+    <div class="modal" id="upgradeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-header">
+                <h2>Upgrade Your Plan</h2>
+            </div>
+            <div class="modal-body">
+                <p id="limitMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="dismissBtn">Maybe Later</button>
+                <a href="pricing.html" class="btn-primary">View Plans</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
