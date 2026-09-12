@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - HAVEN AI Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h1>HAVEN</h1>
+                    <p>AI Studio</p>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="create.html" class="nav-link">Create</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="settings.html" class="nav-link active">Settings</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-text" id="logoutBtn">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="sidebar-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="create.html" class="sidebar-link">
+                    <span class="sidebar-icon">✨</span>
+                    <span>Create</span>
+                </a>
+                <a href="projects.html" class="sidebar-link">
+                    <span class="sidebar-icon">📁</span>
+                    <span>Projects</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link">
+                    <span class="sidebar-icon">💳</span>
+                    <span>Pricing</span>
+                </a>
+                <a href="settings.html" class="sidebar-link active">
+                    <span class="sidebar-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <span class="sidebar-icon">💬</span>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Settings</h1>
+                    <p>Manage your account and preferences</p>
+                </div>
+
+                <!-- Profile Section -->
+                <div class="settings-section">
+                    <h2>Profile</h2>
+                    <div class="settings-card">
+                        <div class="form-group">
+                            <label for="userName">Full Name</label>
+                            <input type="text" id="userName" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email Address</label>
+                            <input type="email" id="userEmail" placeholder="you@example.com">
+                        </div>
+                        <button class="btn-primary" onclick="saveProfile()">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- Plan Section -->
+                <div class="settings-section">
+                    <h2>Current Plan</h2>
+                    <div class="settings-card">
+                        <div class="plan-info">
+                            <h3 id="planName">Free</h3>
+                            <p id="planPrice">PKR 0/month</p>
+                            <div class="plan-features" id="planFeatures"></div>
+                        </div>
+                        <a href="pricing.html" class="btn-primary">Change Plan</a>
+                    </div>
+                </div>
+
+                <!-- Usage Section -->
+                <div class="settings-section">
+                    <h2>Usage & Limits</h2>
+                    <div class="settings-card">
+                        <div class="usage-stats" id="usageStats"></div>
+                    </div>
+                </div>
+
+                <!-- Account Section -->
+                <div class="settings-section">
+                    <h2>Account</h2>
+                    <div class="settings-card danger">
+                        <h3>Log Out</h3>
+                        <p>You will be logged out of your account</p>
+                        <button class="btn-danger" id="logoutSettingsBtn">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>
